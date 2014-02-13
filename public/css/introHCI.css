@@ -68,7 +68,7 @@
      right: 0;
 }
 
-.spotify:hover .handle {
+.spotify.active .handle, .spotify:hover .handle {
      opacity: 1;
 }
 

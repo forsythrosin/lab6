@@ -61,6 +61,7 @@ function setColors(colorData) {
 function showSpotify($spotifyElement) {
 	var $project = $spotifyElement.parents('.project');
 	var $content = $spotifyElement.children('.content');
+	$spotifyElement.addClass('active');
 	if ($content.children().length == 0) {
 		var projectID = $project.attr('id');
 		var idNumber = projectID.substr('project'.length);
@@ -136,6 +137,7 @@ function showSpotify($spotifyElement) {
 		var $closeButton = $('<div class="exit">close</div>');
 		$closeButton.click(function() {
 			$content.stop().slideUp(100);
+			$spotifyElement.removeClass('active');
 		});
 
 		$content.append($closeButton);
