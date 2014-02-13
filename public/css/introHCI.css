@@ -30,6 +30,10 @@
      color: #6e6e6e;
 }
 
+.project {
+     position: relative;
+}
+
 .project a {
      text-align: center;
 }
@@ -43,3 +47,157 @@
      margin: 10px 10px 10px 0px;
      float: left;
 }
+
+.spotify {
+     position: absolute;
+     top: 5px;
+     right: 5px;
+}
+
+.spotify .handle {
+     background-image: url('../images/spotify.png');
+     height: 53px;
+     width: 53px;
+     opacity: 0.5;
+     cursor: pointer;
+     -webkit-transition: all .1s ease-in-out;
+     transition: all .1s ease-in-out;
+     position: absolute;
+     top: 0;
+     right: 0;
+}
+
+.spotify:hover .handle {
+     opacity: 1;
+}
+
+.spotify .content:before {
+     content: '';
+     width: 0;
+     height: 0;
+     position: absolute;
+     top: -10px;
+     right: 17px;
+     border-bottom: 10px solid rgba(0,0,0,0.8);
+     border-left: 10px solid transparent;
+     border-right: 10px solid transparent;
+}
+
+.spotify .content {
+     display: none;
+     width: 150px;
+     height: 150px;
+     background: rgba(0,0,0,0.8);
+     position: absolute;
+     top: 68px;
+     right: 0;
+     border-radius: 5px;
+}
+
+.spotify .content .exit {
+     position: absolute;
+     bottom: 5px;
+     right: 5px;
+     cursor: pointer;
+     color: white;
+     font-size: 12px;
+     opacity: 0.5;
+}
+
+.spotify .content .exit:hover {
+     opacity: 1;
+}
+
+.spotify .nextButton, .spotify .prevButton {
+     position: absolute;
+     top: 50%;
+     height: 50px;
+     width: 20px;
+     margin-top: -25px;
+     cursor: pointer;
+}
+
+.spotify .nextButton:after, .spotify .prevButton:after {
+     content: '';
+     position: absolute;
+     top: 10px;
+     width: 0;
+     height: 0;
+     border-top: 15px solid transparent;
+     border-bottom: 15px solid transparent;
+     -webkit-transition: all .1s ease-in-out;
+     transition: all .1s ease-in-out;
+}
+
+.spotify .nextButton:hover:after, .spotify .prevButton:hover:after {
+     border-left-color: white;
+     border-right-color: white;
+}
+
+.spotify .nextButton {
+     right: 3px;
+}
+
+.spotify .nextButton:after {
+     right: 0;
+     border-left: 10px solid rgba(255,255,255,0.5);
+}
+
+.spotify .prevButton {
+     left: 3px;
+}
+
+.spotify .prevButton:after {
+     left: 0;
+     border-right: 10px solid rgba(255,255,255,0.5);
+}
+
+.spotify .tracksContainer {
+     height: 100%;
+     width: 100%;
+     overflow: hidden;
+}
+
+.spotify .tracks {
+     position: relative;
+     top: 0;
+     left: 0;
+     width: 1500px;
+     height: 100%;
+     overflow: visible;
+}
+
+.spotify .track {
+     color: white;
+     padding: 5px 10px;
+     height: 100%;
+     width: 150px;
+     float: left;
+     text-align: center;
+     position: relative;
+}
+
+     .spotify .track h4 {
+          font-size: 14px;
+          margin: 3px 0;
+          position: absolute;
+          bottom: 20px;
+          left: 15px;
+          right: 15px;
+     }
+
+     .spotify .track .playButton {
+          display: block;
+          margin: 15px auto;
+          height: 40px;
+          width: 40px;
+          background-image: url('../images/playButton.png');
+          opacity: 0.5;
+          cursor: pointer;
+          -webkit-transition: all .1s ease-in-out;
+          transition: all .1s ease-in-out;
+     }
+
+     .spotify .track .playButton:hover {
+          opacity: 1;
+     }
